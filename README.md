@@ -15,7 +15,8 @@ Each cache instance is a hash of it's parameters. Annotations with the same para
 ```
 name: String, a name for the cache. Default name is "default1000Item5MinuteCache"
 maximumSize: Long, maximum number of items in the cache. Default maximumSize is 1000
-expireAfterWriteSeconds: Long, number of seconds after writing to the cache to expire items. Default is 300```
+expireAfterWriteSeconds: Long, number of seconds after writing to the cache to expire items. Default is 300
+```
 
 These parameters can be overridden by specifying the value you want in your annotation invocation. Ex:
 ```
@@ -34,7 +35,8 @@ These parameters can be overridden by specifying the value you want in your anno
     public Mono<String> myCustomCachedMono() {
         System.out.println("Uncached response");
         return Mono.just("hey");
-    }```
+    }
+```
 
 ## Acknowledgements:
 https://github.com/ben-manes/caffeine/discussions/500
