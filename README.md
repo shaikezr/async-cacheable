@@ -4,6 +4,8 @@
 
 Caching annotation used to cache Mono/Flux values. Uses an async loading cache to offer resilience to cache stampedes. Converts Mono/Flux to CompleteableFuture prior to upserting into the cache, and converts from CompleteableFuture back to Mono/Flux after retrieval from the cache.
 
+NOTE: Spring recently added support for Reactive types through `@Cacheable`, so that is the preferred approach now. Use Spring's out-of-the-box `@Cacheable` annotation instead of this. See: https://github.com/spring-projects/spring-framework/issues/17920
+
 ## Usage:
 
 Simply annotate a function returning Mono/Flux with `@AsyncCacheable`.
